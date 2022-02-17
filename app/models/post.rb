@@ -13,3 +13,5 @@ class Post < ApplicationRecord
     against: %i[title author body],
     associated_against: { comments: %i[body] }
 end
+
+#Classe para fazer o post. no blog
