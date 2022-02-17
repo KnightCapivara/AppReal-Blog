@@ -1,7 +1,7 @@
 # Criação de Aplicações Reais - Blog
 
-	desenvolvimento no rails para criação de um blog funcional. 
-	Curso programação Ruby on Rails.
+- Desenvolvimento no rails para criação de um blog funcional. 
+- Curso programação Ruby on Rails.
 	
 	
 
