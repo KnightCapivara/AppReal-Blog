@@ -3,15 +3,12 @@ class Post < ApplicationRecord
   extend FriendlyId
 
   validates :title, :author, :body, presence: true
-  
-  #Destroi o comentario.
+
   has_many :comments, dependent: :destroy
 
   friendly_id :title, use: :slugged
-
+  
   pg_search_scope :search,
     against: %i[title author body],
     associated_against: { comments: %i[body] }
 end
-
-#Classe para fazer o post. no blog.
