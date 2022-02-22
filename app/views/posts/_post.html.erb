@@ -5,10 +5,16 @@
     <div class='text-muted mb-2'>
       <em>Por <%= post.author %> (<%= l post.created_at, format: :short %>)</em>
     </div>
+# post.author => da autor de quem fez o post e a seguir um formato para data-hora de publicação (format and short)
 
     <p><%= post.body.truncate(200) %></p>
+# truncate => escolhe a quantidade de caracteristics
 
     <p class='text-muted'><%= pluralize(post.comments.count, 'Comentário') %></p>
+# comments.count => contabiliza a quantidade de post | pluralize => pluraliza a quantidade em comentarios
+# config/initializers/inflections.rb => ActiveSupport::Inflector.inflections(:'pt-BR') do |inflect|
+#   inflect.plural 'Comentário', 'Comentários'
+#   inflect.plural 'resultado', 'resultados'
 
     <%= link_to 'Ler Artigo', post, class: 'btn btn-primary' %>
     <%= link_to 'Editar', edit_post_path(post), class: 'btn btn-secondary' %>
