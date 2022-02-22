@@ -25,6 +25,8 @@ development:
   <<: *default
   database: blog_development
 
+  # Sempre que for iniciar uma aplicação, configure o banco de dados para o nome do database. Se não Rails da erro:5432
+
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
