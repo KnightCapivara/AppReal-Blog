@@ -5,6 +5,7 @@
 	
 - Funcionando perfeitamente e corrigido o erro do banco de dados
 
+- adicionar repositorio na Vercel
 
 # 
 Mentores: Lucas e Mauricio.
