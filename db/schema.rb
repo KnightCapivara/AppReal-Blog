@@ -10,28 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_31_081010) do
+ActiveRecord::Schema.define(version: 2018_09_11_071320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "comments", force: :cascade do |t|
-    t.bigint "post_id"
-    t.string "author"
-    t.text "body"
+  create_table "tasks", force: :cascade do |t|
+    t.string "description", null: false
+    t.date "due_date"
+    t.boolean "done", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.bigint "parent_id"
+    t.index ["parent_id"], name: "index_tasks_on_parent_id"
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "author"
-    t.text "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "slug"
-  end
-
-  add_foreign_key "comments", "posts"
+  add_foreign_key "tasks", "tasks", column: "parent_id"
 end
