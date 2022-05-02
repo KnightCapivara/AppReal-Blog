@@ -6,12 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Blog
+module Todo
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    #add o idioma padrão em pt_BR e o fusiorario do local
     config.i18n.default_locale = 'pt-BR'
     config.time_zone = 'Brasilia'
 

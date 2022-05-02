@@ -1,15 +1,10 @@
 pt-BR:
   activerecord:
     models:
-      post: 'Post'
-      comment: 'Comentário'
+      task: 'Tarefa'
 
     attributes:
-      post:
-        title: 'Título'
-        author: 'Autor'
-        body: 'Post'
-
-      comment:
-        author: 'Autor'
-        body: 'Comentário'
+      task:
+        description: 'Descrição'
+        due_date: 'Prazo'
+        done: 'Finalizada?'

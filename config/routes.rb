@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  root 'posts#index'
+  root 'tasks#index'
 
-  resources :posts do
-    get :search, on: :collection
+  resources :tasks, except: %i[show] do
+    collection do
+      get :export_csv
+    end
   end
-
-  resources :comments, only: %i[create]
 end
